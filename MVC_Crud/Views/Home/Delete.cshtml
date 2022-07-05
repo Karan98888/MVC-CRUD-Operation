@@ -1,0 +1,24 @@
+@model Customers
+@{
+    ViewData["Title"] = "Delete Customer";
+}
+<h1 style="text-align:center;">@ViewData["Title"]</h1>
+
+<form method="post">
+    <table>
+        <tr>
+            <td>
+                <label asp-for="custId">cust Id</label>        
+            </td>
+            <td>
+                <input asp-for="custId" />
+            </td>
+        </tr>
+        
+        <tr rowspan="2">
+            <td>
+                <button style="align-items: center;" type="submit">Delete</button>
+            </td>
+        </tr>
+    </table>
+</form>

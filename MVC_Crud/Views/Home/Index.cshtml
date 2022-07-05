@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Customers>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2 style="text-align: center;">List of All Customers</h2>
+
+<table style="border: 1px solid black; width : 100%">
+    <thead>
+        <th style="width:20%;border-left: 1px solid black;">Cust Id</th>
+        <th style="width:20%;border-left: 1px solid black;">Cust Name</th>
+        <th style="width:20%;border-left: 1px solid black;">City</th>
+        <th style="width:20%;border-left: 1px solid black;">Credit Balance</th>
+        <th style="width:20%;border-left: 1px solid black;">Pan No</th>
+        <th style="width:20%;border-left: 1px solid black;">Action</th>
+    </thead>
+    <tbody>
+        @foreach (Customers cust in Model)
+        {
+            if(@cust.custId > 0)
+            {
+            <tr>
+                <td style="width:20%; border: 1px solid black;">@cust.custId</td>
+                <td style="width:20%; border: 1px solid black;">@cust.custName</td>
+                <td style="width:20%; border: 1px solid black;">@cust.city</td>
+                <td style="width:20%; border: 1px solid black;">@cust.creditBal</td>
+                <td style="width:20%; border: 1px solid black;">@cust.panNo</td>
+                <td style="width:20%; border: 1px solid black;">
+                    <a asp-action="Update" asp-route-custid="@cust.custId">Update</a>
+                    </td>
+            </tr>
+            }
+        }
+        <td></td>
+    </tbody>
+</table>

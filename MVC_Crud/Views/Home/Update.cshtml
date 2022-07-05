@@ -1,0 +1,62 @@
+@model Customers
+@{
+    ViewData["Title"] = "Update Customer";
+}
+<h1 style="text-align:center;">@ViewData["Title"]</h1>
+
+<form method="post" >
+    <table>
+        <tr>
+            <td>
+                <label asp-for="custId">cust Id</label>        
+            </td>
+            <td>
+                <input asp-for="custId" />
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <label asp-for="custName">Cust Name</label>
+            </td>
+            <td>
+                <input asp-for="custName" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label asp-for="city">City</label>
+            </td>
+            <td>
+                <input asp-for="city" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label asp-for="creditBal">Credit Balance</label>
+            </td>
+            <td>
+                <input asp-for="creditBal" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label asp-for="panNo">Pan No</label>
+            </td>
+            <td>
+                <input asp-for="panNo" />
+            </td>
+        </tr>
+
+        <tr rowspan="2">
+            <td>
+                <button style="align-items: center;" type="submit">Submit</button>
+            </td>
+        </tr>
+    </table>
+    
+    
+</form>
